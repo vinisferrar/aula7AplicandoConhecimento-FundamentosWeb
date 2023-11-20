@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+
+        <script>
+
+        function times_esportes() {
+
+            //Parte 1
+
+            var times = [
+                {
+                    modalidade:"Futebol",
+                    nome:"Barcelona",
+                    jogadores:22,
+                    cor:"azul",
+                    brasao:"Barcelona.png",
+                },
+                {
+                    modalidade:"Vôlei",
+                    nome:"Vôlei Renata",
+                    jogadores:"10",
+                    cor:"verde",
+                    brasao:"renata.png",
+                },
+                {
+                    modalidade:"Futebol",
+                    nome:"São Paulo",
+                    jogadores:22,
+                    cor:"preto",
+                    brasao:"sao_paulo.png",
+                }
+            ];
+            
+            document.write('<h2>Array com todas as informações</h2>');
+        
+                for (var i = 0; i < times.length; i++) {
+
+                    document.write('<ul>');
+                    document.write('<li>Modalidade: ' + times[i].modalidade + '</li>');
+                    document.write('<li>Nome do time: ' + times[i].nome + '</li>');
+                    document.write('<li>Quantidade de jogadores: ' + times[i].jogadores + '</li>');
+                    document.write('<li>Cor predominante: ' + times[i].cor + '</li>');
+                    document.write('</ul>');
+
+                }
+            
+            //Parte 2
+
+            document.write('<h2>Escolha uma cor predominante (if)</h2>');
+
+            var CorPredominante = "preto";
+
+            for (var i = 0; i < 3; i++){
+
+                if (times[i].cor == CorPredominante){
+
+                    document.write('<ul>');
+                    document.write('<li>Modalidade: ' + times[i].modalidade + '</li>');
+                    document.write('<li>Nome do time: ' + times[i].nome + '</li>');
+                    document.write('<li>Quantidade de jogadores: ' + times[i].jogadores + '</li>');
+                    document.write('<img width="250px" src="' + times[i].brasao + '">');
+                    document.write('</ul>');
+
+                }
+
+            }
+
+        }
+
+        </script>
+    </head>
+    <body>
+        <script>
+            times_esportes();
+        </script>
+    </body>
+</html>
